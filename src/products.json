@@ -5,42 +5,48 @@
             "title":"Vintage Backpack",
             "price": 54.99,
             "oldPrice": 94.99,
-            "quantity": 1
+            "quantity": 1,
+            "id": 1
          },
          {
              "img":"https://images.unsplash.com/photo-1494496195158-c3becb4f2475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
              "title": "Shoes",
              "price": 74.99,
              "oldPrice": 124.99,
-             "quantity": 1
+             "quantity": 1,
+             "id": 2
           },
           {
             "img":"https://images.unsplash.com/photo-1481729379561-01e43a3e1ed4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1436&q=80",
             "title": "Yellow Boots",
             "price": 55.99,
             "oldPrice": 80.99,
-            "quantity": 1
+            "quantity": 1,
+            "id": 3
          },
          {
             "img":"https://images.unsplash.com/photo-1594223515488-7dbc35d61eca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=694&q=80",
             "title": "Bag",
             "price": 125.99,
             "oldPrice": 179.99,
-            "quantity": 1
+            "quantity": 1,
+            "id": 4
          },
          {
             "img":"https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
             "title": "Glasses",
             "price": 57.99,
             "oldPrice": 89.99,
-            "quantity": 1
+            "quantity": 1,
+            "id": 5
          },
          {
             "img":"https://images.unsplash.com/photo-1542841791-1925b02a2bbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
             "title": "Boots",
             "price": 87.99,
             "oldPrice": 139.99,
-            "quantity": 1
+            "quantity": 1,
+            "id": 6
          }
 
     

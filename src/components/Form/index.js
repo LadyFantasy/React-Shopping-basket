@@ -1,6 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEnvelope, faPhoneAlt, faUser, faHome, faCity, faGlobeAmericas, faMailBulk} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhoneAlt, faUser, faHome, faCity, faGlobeAmericas, faMailBulk} from '@fortawesome/free-solid-svg-icons'
 import "./index.scss"
 
 

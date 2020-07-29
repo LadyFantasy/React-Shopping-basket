@@ -13,29 +13,48 @@ class Basket extends React.Component{
     }
 
 componentDidMount(){
+    // traerlo de local storage
     const producstLS = {...localStorage}
-
     const itemsArray = Object.values(producstLS)
-
     const parsedArray = []
 
     itemsArray.map(item => {
         parsedArray.push(JSON.parse(item))
     })
 
-    console.log("parsedArray", parsedArray)
     this.setState({
         products : parsedArray
     })
 
+
+    // sumar los precios totales
+
+    let totalPrice = 0
+
+    this.state.products.map((product) => {
+      totalPrice = totalPrice + product[0].price
+    })
+
+    this.setState({
+      totalPrice: totalPrice
+    })
+
+
 }
 
 
-    // handleCallback() {
-    //     this.setState({
-    //     totalPrice: this.state.totalPrice + 1
-    //     })
-    // }
+    handleCallback(action, price) {
+        console.log("llegó el callback", action, price)
+    
+        const {totalPrice} = this.state
+        const newTotalPrice = action == "less" ? totalPrice - price : totalPrice + price
+
+        this.setState({
+            totalPrice: Math.floor(newTotalPrice)
+          })
+    }
+
+
 
     render() {
         const {products, totalPrice} = this.state
@@ -45,7 +64,15 @@ componentDidMount(){
                 <div className="products-container">
                     {products.map((product, key) => {
                     return (
-                        <Product id={product.id} handleCallback={() => this.handleCallback()} key={key} qty={product[0].quantity} img={product[0].img} price={product[0].price} title={product[0].title} oldPrice={product[0].oldPrice}/>
+                        <Product
+                        id={product[0].id}
+                        key={key}
+                        qty={product[0].quantity}
+                        img={product[0].img}
+                        price={product[0].price}
+                        title={product[0].title}
+                        oldPrice={product[0].oldPrice}
+                        handleCallback={(action, price) => this.handleCallback(action, price)}/>
                     )
                     })}
 
