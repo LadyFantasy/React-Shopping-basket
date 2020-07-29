@@ -1,0 +1,57 @@
+.product{
+    display: flex;
+    margin-bottom: 1.5rem;
+    
+
+    .product-img{
+        width: 9rem;
+        height: 9rem;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .product-content{
+        padding-left: 2rem;
+
+        .product-title{
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: .5rem;
+        }
+
+        .product-price, .product-old-price{
+            font-size: .9em;
+            padding: .5rem;
+        }
+
+        .product-price{
+            color: rgb(255, 136, 0);
+            font-weight: 600;
+        }
+
+        .product-old-price{
+            text-decoration: line-through;
+        }
+
+        .counter{
+            max-width: 8rem;
+            padding: .5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0;
+            border: 1px solid black;
+            border-radius: 8px;
+
+            .counter-sign{
+                background-color: rgba(128, 128, 128, 0.274);
+                padding: .3rem .5rem;
+                border-radius: 5px;
+            }
+
+            .counter-qty{
+                margin: 0 1rem;
+            }
+        }
+    }
+}

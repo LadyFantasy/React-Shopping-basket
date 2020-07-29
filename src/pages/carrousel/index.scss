@@ -1,0 +1,44 @@
+.slick-arrow{
+    z-index: 9999;
+    top: 35%;
+    position: fixed;
+    padding: 0 4rem;
+
+}
+
+
+.carrousel-container{
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+
+    
+
+    .img-container{
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.123);
+        
+        .img{
+            width: 20rem;
+            height: 20rem;
+            object-fit: cover;
+        }
+
+        .img-text{
+            margin-top: .7rem;
+            text-align: center;
+        }
+    }
+    
+    
+}
+
+.link-carrito{
+    margin: 2rem 0;
+    background-color: rgba(223, 223, 223, 0.507);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+

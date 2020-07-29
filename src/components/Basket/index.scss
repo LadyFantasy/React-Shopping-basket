@@ -1,0 +1,20 @@
+.basket-container{
+    min-width: 25rem;
+    margin: 1rem 5rem;
+    padding: 2rem 1rem;
+    flex-shrink: 0;
+    background-color: rgba(235, 235, 235, 0.795);
+    border-radius: 18px;
+    align-self: flex-start;
+
+    .shipping-container,
+    .total-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: .5rem 2rem;
+        padding: .8rem 0;
+        font-weight: 600;
+        border-top: 1px solid rgba(0, 0, 0, 0.637);
+    }
+}

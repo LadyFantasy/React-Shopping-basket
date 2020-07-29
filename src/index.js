@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import App from "./pages/App"
+import Carrousel from "./pages/carrousel"
+import {BrowserRouter as Router, Route} from "react-router-dom" 
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route exact path="/" component={Carrousel} />
+    <Route exact path="/checkout" component= {App} />
+  </Router>,
   document.getElementById('root')
 );
 
