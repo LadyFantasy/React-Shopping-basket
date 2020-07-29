@@ -12,29 +12,6 @@ class Product extends React.Component{
 
 
 
-    // handleIncrement() {
-    //     this.setState({
-    //         qty : this.state.qty + 1
-    //     },
-    //         this.props.handleCallback(this.props.id, this.props.price * this.state.qty));
-
-    // }
-
-
-    // handleDecrement(){
-    //     if (this.state.qty < 2) {
-    //       this.setState({
-    //         qty: 1
-    //       });
-    //     } else {
-    //       this.setState({
-    //         qty: this.state.qty - 1
-    //       }, 
-    //         this.props.handleCallback(this.props.id, this.props.price * this.state.qty));
-    //       }
-    //   };
-
-
 
       handleClick(action){
         const {qty} = this.state
@@ -55,7 +32,6 @@ class Product extends React.Component{
       }
 
     render(){
-        console.log("id", this.props.id)
         const {id, qty, img, price, title, oldPrice} = this.props
         return(
             <div className="product">

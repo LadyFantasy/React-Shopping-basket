@@ -39,7 +39,6 @@ componentDidMount(){
       totalPrice: totalPrice
     })
 
-
 }
 
 
