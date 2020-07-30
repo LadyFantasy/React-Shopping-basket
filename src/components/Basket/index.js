@@ -24,7 +24,6 @@ componentDidMount(){
         const parsedItem = JSON.parse(item)
         parsedArray.push(parsedItem)
         totalPrice = totalPrice + parsedItem[0].price
-        console.log(totalPrice)
     })
 
 
@@ -38,13 +37,12 @@ componentDidMount(){
 
 
     handleCallback(action, price) {
-        console.log("llegó el callback", action, price)
-    
+        
         const {totalPrice} = this.state
         const newTotalPrice = action == "less" ? totalPrice - price : totalPrice + price
 
         this.setState({
-            totalPrice: Math.floor(newTotalPrice)
+            totalPrice: newTotalPrice
           })
     }
 
@@ -77,7 +75,7 @@ componentDidMount(){
                 </div>
                 <div className="total-container">
                     <p className="total-text">Total</p>
-                    <p className="totalPrice">$ {totalPrice}</p>
+                    <p className="totalPrice">$ {Math.floor(totalPrice)}</p>
                 </div>
             </div>
         )
