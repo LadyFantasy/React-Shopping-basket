@@ -11,8 +11,6 @@ class Product extends React.Component{
     }
 
 
-
-
       handleClick(action){
         const {qty} = this.state
         const {price} = this.props

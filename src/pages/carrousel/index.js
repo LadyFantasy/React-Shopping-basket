@@ -13,11 +13,14 @@ class Carrousel extends React.Component{
         }
 
         this.settings = {
-          slidesToShow :5,
+          slidesToShow :4,
           slidesToScroll: 2,
           arrows: true,
           infinite: true,
-          variableWidth: true
+          variableWidth: true,
+          accesibility: true,
+          touchThreshold:100
+
         }
     }
 
