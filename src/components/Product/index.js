@@ -42,9 +42,9 @@ class Product extends React.Component{
                     <span className="product-old-price">${oldPrice}</span>
 
                     <div className="counter">
-                        <span className="counter-sign" onClick={() => this.handleClick("less")}>-</span>
+                        <button className="counter-sign" onClick={() => this.handleClick("less")}>-</button>
                         <span className="counter-qty">{Math.floor(this.state.qty)}</span>
-                        <span className="counter-sign" onClick={() => this.handleClick("more")}>+</span>
+                        <button className="counter-sign" onClick={() => this.handleClick("more")}>+</button>
                     </div>
                 </div>
             </div>
