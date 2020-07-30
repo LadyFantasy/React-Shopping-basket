@@ -32,6 +32,7 @@ class Carrousel extends React.Component{
 
       localStorage.setItem(filtered[0].title, JSON.stringify(filtered))
 
+      // se usa history.push en vez de englobarlo en <LINK> porque tiene que hacer otra función antes de redireccionar
       this.props.history.push("/checkout")
       
     }

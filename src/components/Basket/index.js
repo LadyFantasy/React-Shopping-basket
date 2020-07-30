@@ -18,26 +18,21 @@ componentDidMount(){
     const itemsArray = Object.values(producstLS)
     const parsedArray = []
 
-    itemsArray.map(item => {
-        parsedArray.push(JSON.parse(item))
-    })
-
-    this.setState({
-        products : parsedArray
-    })
-
-
-    // sumar los precios totales
-
     let totalPrice = 0
 
-    this.state.products.map((product) => {
-      totalPrice = totalPrice + product[0].price
+    itemsArray.map(item => {
+        const parsedItem = JSON.parse(item)
+        parsedArray.push(parsedItem)
+        totalPrice = totalPrice + parsedItem[0].price
+        console.log(totalPrice)
     })
 
+
     this.setState({
-      totalPrice: totalPrice
+        products : parsedArray,
+        totalPrice : totalPrice
     })
+
 
 }
 
