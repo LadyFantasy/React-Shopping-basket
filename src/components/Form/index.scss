@@ -5,6 +5,11 @@
     flex-shrink: 0;
     padding-bottom: 2rem;
 
+    @media screen and (max-width: 600px){
+        flex-shrink: 1;
+        width: 98%;
+      }
+
     
 
     .contact-info-title{
@@ -40,6 +45,11 @@
         justify-content: space-between;
         margin-top: 1rem;
         width: 100%;
+
+        @media screen and (max-width: 600px){
+            flex-shrink: 1;
+            width: 98%;
+          }
 
         .country{
             flex: 1;
