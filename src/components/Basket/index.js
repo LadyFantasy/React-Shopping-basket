@@ -8,7 +8,8 @@ class Basket extends React.Component{
 
         this.state = {
             products : [],
-            totalPrice : 0
+            totalPrice : 0,
+            shipping: 19
         }
     }
 
@@ -49,7 +50,7 @@ componentDidMount(){
 
 
     render() {
-        const {products, totalPrice} = this.state
+        const {products, totalPrice, shipping} = this.state
         
         return(
             <div className="basket-container">
@@ -71,11 +72,11 @@ componentDidMount(){
                 </div>
                 <div className="shipping-container">
                     <p className="shipping-text">Shipping</p>
-                    <p className="shipping">$19</p>
+                    <p className="shipping">${shipping}</p>
                 </div>
                 <div className="total-container">
                     <p className="total-text">Total</p>
-                    <p className="totalPrice">$ {Math.floor(totalPrice)}</p>
+                    <p className="totalPrice">$ {Math.floor(totalPrice + shipping)}</p>
                 </div>
             </div>
         )

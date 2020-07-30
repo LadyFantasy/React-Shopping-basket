@@ -47,7 +47,7 @@ class Form extends React.Component{
                         <div className="input-container">
                         <FontAwesomeIcon icon={faGlobeAmericas}/>
                         <select name="country" id="country" >
-                            <option className="select-placeholder" value="" disabled selected >Your country...</option>
+                            <option className="select-placeholder" value="" hidden disabled selected >Your country...</option>
                             <option value="Argentina">Argentina</option>
                             <option value="Chile">Chile</option>
                             <option value="Brasil">Brasil</option>
