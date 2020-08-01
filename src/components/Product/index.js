@@ -13,7 +13,7 @@ class Product extends React.Component{
 
       handleClick(action){
         const {qty} = this.state
-        const {price} = this.props
+        const {price, id, title} = this.props
         const newQty = action == "less" ? qty - 1 : qty + 1
 
         if (newQty > 0) {
@@ -23,6 +23,9 @@ class Product extends React.Component{
             this.setState({
                 qty: newQty
             })
+        }else{
+            this.props.deleteCallback(id)
+            localStorage.removeItem(title)
         }
 
 
@@ -31,6 +34,7 @@ class Product extends React.Component{
 
     render(){
         const {id, qty, img, price, title, oldPrice} = this.props
+        
         return(
             <div className="product">
                 <img className="product-img" src={img} alt="product image"/>

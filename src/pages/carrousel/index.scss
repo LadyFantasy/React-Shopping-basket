@@ -4,6 +4,16 @@
     position: fixed;
     padding: 0 4rem;
 
+    @media screen and (max-width:600px){
+        top: 8%;
+        
+    }
+}
+
+.slick-next, .slick-next::before{
+    @media screen and (max-width:600px){
+        left: 23rem;
+    }
 }
 
 

@@ -18,22 +18,22 @@ class Carrousel extends React.Component{
           arrows: true,
           infinite: true,
           variableWidth: true,
-          accesibility: true,
-          touchThreshold:100
+          draggagle:false,
+          responsive: [{
+            breakpoint: 850,
+            settings: {
+              slidesToShow:1,
+              slidesToScroll: 1,
+              variableWidth:true
+            }
+          }]
 
         }
     }
 
-    handleClick(e) {
-      const {products} = this.state
-      const {innerText} = e.target.parentNode.childNodes[1]
+    handleClick(product) {
     
-      const filtered = products.filter(product => {
-        return(product.title === innerText)
-        
-      })
-
-      localStorage.setItem(filtered[0].title, JSON.stringify(filtered))
+      localStorage.setItem(product.title, JSON.stringify(product))
 
       // se usa history.push en vez de englobarlo en <LINK> porque tiene que hacer otra función antes de redireccionar
       this.props.history.push("/checkout")
@@ -52,7 +52,7 @@ class Carrousel extends React.Component{
 
                   return(
                     
-                      <div className="img-container" key={key} onClick={(e) => this.handleClick(e)}>
+                      <div className="img-container" key={key} onClick={() => this.handleClick(product)}>
                         <img className="img" src={product.img}  />
                         <p className="img-text">{product.title}</p>
                         <p className="img-text">$ {product.price}</p>

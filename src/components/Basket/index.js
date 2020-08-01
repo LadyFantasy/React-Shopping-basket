@@ -24,7 +24,7 @@ componentDidMount(){
     itemsArray.map(item => {
         const parsedItem = JSON.parse(item)
         parsedArray.push(parsedItem)
-        totalPrice = totalPrice + parsedItem[0].price
+        totalPrice = totalPrice + parsedItem.price
     })
 
 
@@ -32,7 +32,6 @@ componentDidMount(){
         products : parsedArray,
         totalPrice : totalPrice
     })
-
 
 }
 
@@ -48,6 +47,25 @@ componentDidMount(){
     }
 
 
+    deleteCallback(id) {
+        const {products, totalPrice} = this.state
+        let newTotalPrice = totalPrice
+
+        const filteredProducts = products.filter( product => {
+            if(product.id==id) {
+                newTotalPrice = newTotalPrice - product.price
+            }
+            return product.id !== id
+        })
+
+
+        this.setState({
+            products: filteredProducts,
+            totalPrice : newTotalPrice
+        })
+    }
+
+
 
     render() {
         const {products, totalPrice, shipping} = this.state
@@ -58,14 +76,15 @@ componentDidMount(){
                     {products.map((product, key) => {
                     return (
                         <Product
-                        id={product[0].id}
+                        id={product.id}
                         key={key}
-                        qty={product[0].quantity}
-                        img={product[0].img}
-                        price={product[0].price}
-                        title={product[0].title}
-                        oldPrice={product[0].oldPrice}
-                        handleCallback={(action, price) => this.handleCallback(action, price)}/>
+                        qty={product.quantity}
+                        img={product.img}
+                        price={product.price}
+                        title={product.title}
+                        oldPrice={product.oldPrice}
+                        handleCallback={(action, price) => this.handleCallback(action, price)}
+                        deleteCallback={(id)=>this.deleteCallback(id)}/>
                     )
                     })}
 
